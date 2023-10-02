@@ -1,0 +1,63 @@
+#habit-body {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end; }
+  #habit-body #main {
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: whitesmoke;
+    overflow-y: auto; }
+    #habit-body #main #add-habit {
+      width: 100%;
+      height: 30%; }
+      #habit-body #main #add-habit form {
+        background-color: #173b4b;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        #habit-body #main #add-habit form input {
+          margin-bottom: 10px;
+          height: 40px;
+          width: 500px;
+          border-radius: 40px;
+          border: none;
+          padding: 5px;
+          text-align: center;
+          font-size: larger; }
+        #habit-body #main #add-habit form button {
+          margin-top: 15px;
+          width: 70px;
+          height: 30px;
+          border-radius: 30px;
+          border: none;
+          font-weight: 600;
+          background-color: white; }
+        #habit-body #main #add-habit form button:hover {
+          color: white;
+          background-color: black;
+          cursor: pointer;
+          border: 1px solid white; }
+    #habit-body #main #habits-container {
+      width: 100%;
+      height: 100%; }
+      #habit-body #main #habits-container ul {
+        padding-left: 0; }
+        #habit-body #main #habits-container ul li {
+          margin-bottom: 15px;
+          list-style-type: none;
+          background-color: #14252d; }
+          #habit-body #main #habits-container ul li .name-and-time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px 0 20px; }
+          #habit-body #main #habits-container ul li .calendar {
+            width: 100%;
+            text-align: center; }
+            #habit-body #main #habits-container ul li .calendar a {
+              color: white; }

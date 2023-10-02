@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #d7fff2;
+  height: 100vh; }
+  body #body_ele {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
