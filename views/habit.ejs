@@ -1,0 +1,42 @@
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+<script src="https://kit.fontawesome.com/c7caeefe18.js" crossorigin="anonymous"></script>
+<script type = "text/JavaScript" src ="https://MomentJS.com/downloads/moment-with-locales.js"></script>
+
+
+<link rel="stylesheet" href="/css/habit.css">
+
+
+<div id = "habit-body"> 
+    <%- include('_header') %>
+    <div id = "main">
+        <div id = "add-habit">
+            <form action="/habit/create" method="post">
+                <input type="text" name = "habit" required placeholder="Add Habit">
+                <input type="time" name = "time" required >                
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <!-- <div id="calendar"></div> -->
+    <div id="checkboxes"></div>
+        <div id = 'habits-container'>
+            <ul>
+                <% for (habit of habits){ %>
+                    <li class = 'habits-list'>
+                        <div class="name-and-time">
+                            <h2><%= habit.habit %></h2>
+                            <h3> <%= habit.time %> </h3>
+                        </div>
+                        
+                        <div id = "<%= habit._id %>" class = 'calendar'>
+                            <a href="/habit/show_dates" id = show-dates> <i class="fa-solid fa-caret-down"></i> </a>     
+                        </div>
+                    </li>
+                <% } %>     
+            </ul>
+                   
+        </div>
+    </div>
+</div>
+
+<script src="/js/habit.js"></script>

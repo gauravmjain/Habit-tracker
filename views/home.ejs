@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id = "logins">
+    <div id = "render-sign-list">
+        <%- include('sign_in'); %>
+    </div>
+    
+    <ul id = "sign-list">
+        <% if(locals.user){ %>
+            <li> 
+                <a href="/users/profile/<%= user.id %>"><%= user.name %></a> </li>
+            <li>
+                <a href="/users/sign-out">Sign Out</a>
+            </li>
+        <% } else{ %>            
+            <li id = "sign-in-link">
+                <a href="/users/sign-in"> Log In</a>
+            </li>
+            <li id="sign-up-link">
+                <a href="/users/sign-up"> Sign Up</a>
+            </li>
+            
+        <% } %>
+
+    </ul>
+</div>
+<script type="text/javascript" src="/js/home.js"></script>
